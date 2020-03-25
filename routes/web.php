@@ -23,3 +23,6 @@ Route::get('/home', 'HomeController@index');
 Route::resource('classes', 'ClassController');
 
 Route::resource('classes', 'ClassesController');
+
+Route::resource('classrooms', 'ClassroomController');
+
