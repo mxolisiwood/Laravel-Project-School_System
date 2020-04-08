@@ -26,3 +26,6 @@ Route::resource('classes', 'ClassesController');
 
 Route::resource('classrooms', 'ClassroomController');
 
+
+
+Route::resource('levels', 'LevelController');
