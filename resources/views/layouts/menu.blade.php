@@ -1,6 +1,6 @@
 <li class= "treeview">
 <a href="#">
-<i class="fa fa-dashboard"></i> <span>Main Menu</span>
+<i class="fa fa-dashboard"></i> <span>General</span>
 <span class="pull-right-container">
 <i class="fa fa-angle-left pull-right"></i>
 </span>
@@ -39,9 +39,7 @@
    <a href="{!! route('times.index') !!}"><i class="fa fa-edit"></i><span>Times</span></a>
 </li> 
 
-<li class="{{ Request::is('attendances*') ? 'active' : '' }}">
-   <a href="{!! route('attendances.index') !!}"><i class="fa fa-edit"></i><span>Attendances</span></a>
-</li> 
+
 
 <li class="{{ Request::is('academics*') ? 'active' : '' }}">
    <a href="{!! route('academics.index') !!}"><i class="fa fa-edit"></i><span>Academics</span></a>
@@ -50,7 +48,16 @@
 <li class="{{ Request::is('days*') ? 'active' : '' }}">
    <a href="{!! route('days.index') !!}"><i class="fa fa-edit"></i><span>Days</span></a>
 </li> 
-
+</ul>
+</li>
+<li class= "treeview">
+<a href="#">
+<i class="fa fa-dashboard"></i> <span>Schedule</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class= "treeview-menu">
 <li class="{{ Request::is('classAssignings*') ? 'active' : '' }}">
    <a href="{!! route('classAssignings.index') !!}"><i class="fa fa-edit"></i><span>Class Assignings</span></a>
 </li> 
@@ -58,20 +65,21 @@
 <li class="{{ Request::is('classSchedulings*') ? 'active' : '' }}">
    <a href="{!! route('classSchedulings.index') !!}"><i class="fa fa-edit"></i><span>Class Scheduling</span></a>
 </li> 
-
-<li class="{{ Request::is('treansactions*') ? 'active' : '' }}">
-   <a href="{!! route('treansactions.index') !!}"><i class="fa fa-edit"></i><span>Transactions</span></a>
-</li> 
+</ul>
+</li>
 
 <li class="{{ Request::is('admissions*') ? 'active' : '' }}">
-   <a href="{!! route('admissions.index') !!}"><i class="fa fa-edit"></i><span>Admissions</span></a>
+   <a href="{!! route('admissions.index') !!}"><i class="fa fa-user"></i><span>Admissions</span></a>
 </li> 
 
 
 <li class="{{ Request::is('teachers*') ? 'active' : '' }}">
-   <a href="{!! route('teachers.index') !!}"><i class="fa fa-edit"></i><span>Teachers</span></a>
+   <a href="{!! route('teachers.index') !!}"><i class="fa fa-circle"></i><span>Teachers</span></a>
 </li> 
 
+<li class="{{ Request::is('attendances*') ? 'active' : '' }}">
+   <a href="{!! route('attendances.index') !!}"><i class="fa fa-calendar"></i><span>Attendances</span></a>
+</li> 
 
 <li class="{{ Request::is('roles*') ? 'active' : '' }}">
    <a href="{!! route('roles.index') !!}"><i class="fa fa-edit"></i><span>Roles</span></a>
@@ -79,8 +87,8 @@
 
 
 <li class="{{ Request::is('users*') ? 'active' : '' }}">
-   <a href="{!! route('users.index') !!}"><i class="fa fa-edit"></i><span>Users</span></a>
+   <a href="{!! route('users.index') !!}"><i class="fa fa-user"></i><span>Users</span></a>
 </li> 
-
-</ul>
-</li>
+<li class="{{ Request::is('treansactions*') ? 'active' : '' }}">
+   <a href="{!! route('treansactions.index') !!}"><i class="fa fa-money"></i><span>Transactions</span></a>
+</li> 
