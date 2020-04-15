@@ -16,7 +16,7 @@ class Role extends Model
 
     public $table = 'roles';
 
-    protected $promartKey = 'roles_id';
+    protected $primaryKey = 'roles_id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

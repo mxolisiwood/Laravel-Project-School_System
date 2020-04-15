@@ -17,8 +17,10 @@ class RoleRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        
         'name'
     ];
+    protected $primaryKey = 'roles_id'; // this roles_id is the id that we have inside our database table
 
     /**
      * Return searchable fields
