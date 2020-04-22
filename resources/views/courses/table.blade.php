@@ -15,7 +15,14 @@
                 <td>{{ $course->course_name }}</td>
             <td>{{ $course->course_code }}</td>
             <td>{{ $course->description }}</td>
-            <td>{{ $course->status }}</td>
+            <td>
+            @if($course->status = 1)
+            <span class="text-success">Active</span>
+            @else
+            <span class="text-danger">In-Active</span>
+            @endif
+          
+            </td>
                 <td>
                     {!! Form::open(['route' => ['courses.destroy', $course->course_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
