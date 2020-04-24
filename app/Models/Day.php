@@ -21,7 +21,7 @@ class Day extends Model
 
 
 
-
+    protected $primaryKey = 'day_id';
     public $fillable = [
         'name'
     ];
