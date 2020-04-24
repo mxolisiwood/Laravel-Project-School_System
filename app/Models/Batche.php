@@ -20,7 +20,8 @@ class Batche extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+   protected $primaryKey = 'batch_id';
+  
 
     public $fillable = [
         'batch'
