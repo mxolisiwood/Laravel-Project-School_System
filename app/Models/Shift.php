@@ -21,7 +21,7 @@ class Shift extends Model
 
 
 
-
+    protected $primaryKey = 'shift_id';
     public $fillable = [
         'shift'
     ];
