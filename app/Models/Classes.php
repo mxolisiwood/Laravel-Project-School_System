@@ -21,7 +21,7 @@ class Classes extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+    protected $primaryKey = 'class_id';
 
     public $fillable = [
         'class_name',
