@@ -11,9 +11,40 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($classroom, ['route' => ['classrooms.update', $classroom->id], 'method' => 'patch']) !!}
+                   {!! Form::model($classroom, ['route' => ['classrooms.update', $classroom->classroom_id], 'method' => 'patch']) !!}
 
-                        @include('classrooms.fields')
+                      <!-- Classroom Name Field -->
+        <div class="form-group col-sm-6">
+            {!! Form::label('classroom_name', 'Classroom Name:') !!}
+            {!! Form::text('classroom_name', null, ['class' => 'form-control']) !!}
+        </div>
+
+        <!-- Classroom Code Field -->
+        <div class="form-group col-sm-6">
+            {!! Form::label('classroom_code', 'Classroom Code:') !!}
+            {!! Form::number('classroom_code', null, ['class' => 'form-control']) !!}
+        </div>
+
+        <!-- Classroom Description Field -->
+        <div class="form-group col-sm-12 col-lg-12">
+            {!! Form::label('classroom_description', 'Classroom Description:') !!}
+            {!! Form::textarea('classroom_description', null, ['class' => 'form-control']) !!}
+        </div>
+
+        <!-- Classroom Status Field -->
+        <div class="form-group col-sm-6">
+            {!! Form::label('classroom_status', 'Classroom Status:') !!}
+            <label class="checkbox-inline">
+                {!! Form::hidden('classroom_status', 0) !!}
+                {!! Form::checkbox('classroom_status', '1', null) !!}
+            </label>
+        </div>
+        <!-- Submit Field -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            {!! Form::submit('Update Classroom', ['class' => 'btn btn-primary']) !!}
+        <!-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a>-->
+        </div>
 
                    {!! Form::close() !!}
                </div>

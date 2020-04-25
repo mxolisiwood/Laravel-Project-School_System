@@ -23,7 +23,7 @@ class Classroom extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+    protected $primaryKey = 'classroom_id';
 
     public $fillable = [
         'classroom_name',

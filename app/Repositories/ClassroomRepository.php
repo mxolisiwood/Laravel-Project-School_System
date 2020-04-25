@@ -22,7 +22,7 @@ class ClassroomRepository extends BaseRepository
         'classroom_description',
         'classroom_status'
     ];
-
+    protected $primaryKey = 'classroom_id';
     /**
      * Return searchable fields
      *
