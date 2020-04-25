@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model as Model;
  */
 class Academic extends Model
 {
-
+   
     public $table = 'accademics';
     
     const CREATED_AT = 'created_at';

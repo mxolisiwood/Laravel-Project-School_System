@@ -139,6 +139,7 @@ class AcademicController extends AppBaseController
      */
     public function destroy($id)
     {
+       
         $academic = $this->academicRepository->find($id);
 
         if (empty($academic)) {

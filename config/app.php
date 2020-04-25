@@ -236,6 +236,10 @@ return [
         'Html'  => Collective\Html\HtmlFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
 
+
+        //---SoftDeletes
+        'SoftDeletes' => Illuminate\Database\Eloquent\SoftDeletes::class,
+
     ],
 
 ];
