@@ -21,7 +21,7 @@ class Academic extends Model
 
 
 
-
+    protected $primaryKey = 'academic_id';
     public $fillable = [
         'academic_year'
     ];

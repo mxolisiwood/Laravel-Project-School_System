@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Academics</h1>
         <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('academics.create') }}">Add New</a>
+           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus-circle" arial-hidden="true" data-toggle="modal" data-target="#academic-add-modal">Add New Academic Year</i></a>
         </h1>
     </section>
     <div class="content">
@@ -16,6 +16,11 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('academics.table')
+                    {!! Form::open(['route' => 'academics.store']) !!}
+
+                        @include('academics.fields')
+
+                        {!! Form::close() !!}
             </div>
         </div>
         <div class="text-center">
