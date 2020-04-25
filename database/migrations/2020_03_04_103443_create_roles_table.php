@@ -15,7 +15,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('roles_id');
-            $table->string('name');
+            $table->string('name'); // We use this name for roles,e.g Super Admin, Principal, etc...
             $table->timestamps();
         });
     }

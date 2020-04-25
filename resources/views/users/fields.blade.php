@@ -1,3 +1,4 @@
+
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Name:') !!}
@@ -6,8 +7,8 @@
 
 <!-- Role Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('role', 'Role:') !!}
-    {!! Form::number('role', null, ['class' => 'form-control']) !!}
+    {!! Form::label('role_id', 'Role ID:') !!}
+    {!! Form::number('role_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Email Field -->
@@ -26,7 +27,7 @@
     <script type="text/javascript">
         $('#email_verified_at').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: false
+            useCurrent: true
         })
     </script>
 @endpush

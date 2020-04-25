@@ -47,5 +47,9 @@ class Role extends Model
         'name' => 'required'
     ];
 
+    public function user(){
+        return $this->hasMany('App\Models\User');
+    }
+
     
 }
