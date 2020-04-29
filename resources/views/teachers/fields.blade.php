@@ -1,3 +1,16 @@
+<!-- Modal using bootstap-->
+<div class="modal fade" id="teacher-add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add New Day</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
 <!-- First Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('first_name', 'First Name:') !!}
@@ -28,14 +41,6 @@
     {!! Form::date('dob', null, ['class' => 'form-control','id'=>'dob']) !!}
 </div>
 
-@push('scripts')
-    <script type="text/javascript">
-        $('#dob').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: false
-        })
-    </script>
-@endpush
 
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
@@ -83,14 +88,6 @@
     {!! Form::date('date_registered', null, ['class' => 'form-control','id'=>'date_registered']) !!}
 </div>
 
-@push('scripts')
-    <script type="text/javascript">
-        $('#date_registered').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: false
-        })
-    </script>
-@endpush
 
 <!-- User Id Field -->
 <div class="form-group col-sm-6">
@@ -105,7 +102,12 @@
 </div>
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('teachers.index') }}" class="btn btn-default">Cancel</a>
+<div class="modal-footer">
+ <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+    {!! Form::submit('Add Teacher', ['class' => 'btn btn-primary']) !!}
+   <!-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a>-->
+</div>
+</div>
+</div>
+</div>
 </div>

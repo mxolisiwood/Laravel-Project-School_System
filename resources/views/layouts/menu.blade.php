@@ -91,7 +91,8 @@
 </li> 
 
 
-
+@if(Auth::user()->role_id < 4)
 <li class="{{ Request::is('treansactions*') ? 'active' : '' }}">
    <a href="{!! route('treansactions.index') !!}"><i class="fa fa-money"></i><span>Transactions</span></a>
 </li> 
+@endif

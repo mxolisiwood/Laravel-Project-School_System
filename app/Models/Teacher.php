@@ -33,7 +33,7 @@ class Teacher extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+    protected $primaryKey = 'teacher_id';
 
     public $fillable = [
         'first_name',
