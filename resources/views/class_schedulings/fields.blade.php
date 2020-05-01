@@ -1,5 +1,18 @@
+<div class="modal fade" id="class_schedule-add-modal" tabindex="-1" role="dialog" 
+aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" style="width:90%">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<h5 class="modal-title" id="exampleModalLongTitle">Add New Batch</h5>-->
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class ="modal-tile">Class Schedule</h4>
+      </div>
+      <div class="panel-body" style="border-bottom: 1px solid #ccc;">
+      <div class="form-group">
+
+      <div class="row"></div>
 <!-- Course Id Field -->
-<div class="row">
+
 <div class="form-group col-sm-6">
      <select class="form-control" name="course_id" id="course_id">
         <option value ="">Select Course</option>
@@ -97,11 +110,15 @@
         {!! Form::hidden('status', 0) !!}
         {!! Form::checkbox('status', '1', null) !!}
     </label>
+
+
+
 </div>
-
-
-<!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
-    <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
+</div>
+</div>
+<div class="modal-footer">
+<button type ="submit" class="btn btn-success btn-sm">Generate ClassSchedule</button>
+</div>
+</div>
+</div>
 </div>
