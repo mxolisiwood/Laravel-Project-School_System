@@ -35,7 +35,7 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
 <!-- Level Id Field -->
 <div class="form-group col-sm-6">
-    <select class="form-control" name="level_id" id="level_id">
+    <select class="form-control" name="id" id="level_id">
         <option value ="">Select Level</option>
         @foreach($level as $lev)
         <option value="{{$lev->level_id}}">{{$lev->level}}</option>
@@ -70,7 +70,7 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <select class="form-control" name="batch_id" id="batch_id">
         <option value ="">Select Batch</option>
         @foreach($batche as $btch)
-        <option value="{{$btch->batch_id}}">{{$btch->batche}}</option>
+        <option value="{{$btch->batch_id}}">{{$btch->batch}}</option>
         @endforeach
      </select>  
 </div>

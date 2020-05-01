@@ -17,8 +17,6 @@ use Illuminate\Database\Eloquent\Model as Model;
  * @property integer day_id
  * @property integer time_id
  * @property integer teacher_id
- * @property time start_time
- * @property time end_time
  * @property boolean status
  */
 class ClassScheduling extends Model
@@ -41,8 +39,6 @@ class ClassScheduling extends Model
         'day_id',
         'time_id',
         'teacher_id',
-        'start_time',
-        'end_time',
         'status'
     ];
 
@@ -71,15 +67,12 @@ class ClassScheduling extends Model
      */
     public static $rules = [
         'course_id' => 'required',
-        'level_id' => 'required',
         'shift_id' => 'required',
         'classroom_id' => 'required',
         'batch_id' => 'required',
         'day_id' => 'required',
         'time_id' => 'required',
         'teacher_id' => 'required',
-        'start_time' => 'required',
-        'end_time' => 'required',
         'status' => 'required'
     ];
 
