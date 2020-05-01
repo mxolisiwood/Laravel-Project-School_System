@@ -105,22 +105,6 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
      </select> 
 </div>
 
-<!-- Start Time Field -->
-<div class="form-group col-sm-6">
-    <select class="form-control" name="start_time" id="start_time">
-        <option value ="">Select Time</option>
-        <option value=""></option>
-     </select> 
-</div>
-</div>
-
-<!-- End Time Field -->
-<div class="form-group col-sm-6">
-    <select class="form-control" name="end_time" id="end_time">
-        <option value ="">Select Time</option>
-        <option value=""></option>
-     </select> 
-</div>
 
 <!-- Status Field -->
 <div class="form-group col-sm-6">

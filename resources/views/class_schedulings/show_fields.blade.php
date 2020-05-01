@@ -46,17 +46,6 @@
     <p>{{ $classScheduling->teacher_id }}</p>
 </div>
 
-<!-- Start Time Field -->
-<div class="form-group">
-    {!! Form::label('start_time', 'Start Time:') !!}
-    <p>{{ $classScheduling->start_time }}</p>
-</div>
-
-<!-- End Time Field -->
-<div class="form-group">
-    {!! Form::label('end_time', 'End Time:') !!}
-    <p>{{ $classScheduling->end_time }}</p>
-</div>
 
 <!-- Status Field -->
 <div class="form-group">

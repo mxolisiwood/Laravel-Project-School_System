@@ -10,8 +10,7 @@
         <th>Day Id</th>
         <th>Time Id</th>
         <th>Teacher Id</th>
-        <th>Start Time</th>
-        <th>End Time</th>
+        
         <th>Status</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -27,8 +26,7 @@
             <td>{{ $classScheduling->day_id }}</td>
             <td>{{ $classScheduling->time_id }}</td>
             <td>{{ $classScheduling->teacher_id }}</td>
-            <td>{{ $classScheduling->start_time }}</td>
-            <td>{{ $classScheduling->end_time }}</td>
+           
             <td>{{ $classScheduling->status }}</td>
                 <td>
                     {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!}
