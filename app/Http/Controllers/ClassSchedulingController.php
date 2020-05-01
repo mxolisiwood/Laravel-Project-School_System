@@ -47,10 +47,11 @@ class ClassSchedulingController extends AppBaseController
         $shift = Shift::all();
         $time = Time::all();
         $teacher = Teacher::all();
+        $classroom = Classroom::all();
         
         $classSchedulings = $this->classSchedulingRepository->all();
 
-        return view('class_schedulings.index', compact('batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher'))
+        return view('class_schedulings.index', compact('batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
     }
 

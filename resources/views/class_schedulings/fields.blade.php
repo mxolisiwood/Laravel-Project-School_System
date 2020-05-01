@@ -16,7 +16,10 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
      <select class="form-control" name="course_id" id="course_id">
         <option value ="">Select Course</option>
-        <option value=""></option>
+        <!-- using a foreach loop to get all data from controller-->
+        @foreach($course as $cou)
+        <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
+        @endforeach
      </select>   
 </div>
 
@@ -24,7 +27,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
      <select class="form-control" name="class_id" id="class_id">
         <option value ="">Select Class</option>
-        <option value=""></option>
+        @foreach($class as $cla)
+        <option value="{{$cla->class_id}}">{{$cla->class_name}}</option>
+        @endforeach
      </select>   
 </div>
 
@@ -32,7 +37,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="level_id" id="level_id">
         <option value ="">Select Level</option>
-        <option value=""></option>
+        @foreach($level as $lev)
+        <option value="{{$lev->level_id}}">{{$lev->level}}</option>
+        @endforeach
      </select>   
 </div>
 
@@ -40,7 +47,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="shift_id" id="shift_id">
         <option value ="">Select Shift</option>
-        <option value=""></option>
+        @foreach($shift as $shf)
+        <option value="{{$shf->shift_id}}">{{$shf->shift}}</option>
+        @endforeach
      </select>  
 </div>
 
@@ -48,7 +57,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="classroom_id" id="classroom_id">
         <option value ="">Select Classroom</option>
-        <option value=""></option>
+        @foreach($classroom as $clrm)
+        <option value="{{$clrm->classroom_id}}">{{$clrm->classroom_name}}</option>
+        @endforeach
      </select>  
 </div>
 
@@ -58,7 +69,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="batch_id" id="batch_id">
         <option value ="">Select Batch</option>
-        <option value=""></option>
+        @foreach($batche as $btch)
+        <option value="{{$btch->batch_id}}">{{$btch->batche}}</option>
+        @endforeach
      </select>  
 </div>
 
@@ -66,7 +79,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="day_id" id="day_id">
         <option value ="">Select Day</option>
-        <option value=""></option>
+        @foreach($day as $day)
+        <option value="{{$day->day_id}}">{{$day->name}}</option>
+        @endforeach
      </select>  
 </div>
 
@@ -74,7 +89,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="time_id" id="time_id">
         <option value ="">Select Time</option>
-        <option value=""></option>
+        @foreach($time as $time)
+        <option value="{{$time->time_id}}">{{$time->time}}</option>
+        @endforeach
      </select>  
 </div>
 
@@ -82,7 +99,9 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="form-group col-sm-6">
     <select class="form-control" name="teacher_id" id="teacher_id">
         <option value ="">Select Teacher</option>
-        <option value=""></option>
+        @foreach($teacher as $teach)
+        <option value="{{$teach->teacher_id}}">{{$teach->last_name}}</option>
+        @endforeach
      </select> 
 </div>
 
