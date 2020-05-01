@@ -21,7 +21,7 @@ class Time extends Model
 
 
 
-
+   protected $primaryKey = 'time_id';
     public $fillable = [
         'time'
     ];

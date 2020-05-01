@@ -34,7 +34,7 @@ class TimeController extends AppBaseController
         return view('times.index')
             ->with('times', $times);
     }
-
+    protected $primaryKey = 'time_id';
     /**
      * Show the form for creating a new Time.
      *
