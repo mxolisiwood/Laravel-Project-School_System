@@ -31,6 +31,8 @@ class ClassSchedulingController extends AppBaseController
         $this->classSchedulingRepository = $classSchedulingRepo;
     }
 
+    protected $primaryKey = 'schedule_id';
+
     /**
      * Display a listing of the ClassScheduling.
      *
@@ -53,7 +55,7 @@ class ClassSchedulingController extends AppBaseController
         $classSchedulings = $this->classSchedulingRepository->all();
 
         //DB relationships
-        $classScheduling = DB::table('class_schedulings')->select(
+        $classSchedulings = DB::table('class_schedulings')->select(
                                                                   'courses.*',
                                                                   'levels.*',
                                                                   'days.*',
@@ -62,7 +64,8 @@ class ClassSchedulingController extends AppBaseController
                                                                   'shifts.*',
                                                                   'times.*',
                                                                   'teachers.*',
-                                                                  'classrooms.*'
+                                                                  'classrooms.*',
+                                                                  'schedule_id'
                                                                 )
                                                                 ->join('courses','courses.course_id','=','class_schedulings.course_id')
                                                                 ->join('batches','batches.batch_id','=','class_schedulings.batch_id')
@@ -75,7 +78,7 @@ class ClassSchedulingController extends AppBaseController
                                                                 ->join('classrooms','classrooms.classroom_id','=','class_schedulings.classroom_id')
                                                                 ->get();
 
-        return view('class_schedulings.index', compact('batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher', 'classroom'))
+        return view('class_schedulings.index', compact('classSchedulings','batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
     }
 
