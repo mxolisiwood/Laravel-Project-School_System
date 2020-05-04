@@ -18,14 +18,14 @@
         <tbody>
         @foreach($classSchedulings as $classScheduling)
             <tr>
-                <td>{{ $classScheduling->course_id }}</td>
-            <td>{{ $classScheduling->level_id }}</td>
-            <td>{{ $classScheduling->shift_id }}</td>
-            <td>{{ $classScheduling->classroom_id }}</td>
-            <td>{{ $classScheduling->batch_id }}</td>
-            <td>{{ $classScheduling->day_id }}</td>
-            <td>{{ $classScheduling->time_id }}</td>
-            <td>{{ $classScheduling->teacher_id }}</td>
+                <td>{{ $classScheduling->course_name }}</td>
+            <td>{{ $classScheduling->level }}</td>
+            <td>{{ $classScheduling->shift }}</td>
+            <td>{{ $classScheduling->classroom_name }}</td>
+            <td>{{ $classScheduling->batche }}</td>
+            <td>{{ $classScheduling->day }}</td>
+            <td>{{ $classScheduling->time }}</td>
+            <td>{{ $classScheduling->teacher_name }}</td>
            
             <td>{{ $classScheduling->status }}</td>
                 <td>
