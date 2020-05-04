@@ -28,7 +28,7 @@ class ClassScheduling extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+   protected $primaryKey = 'schedule_id';
 
     public $fillable = [
         'course_id',
