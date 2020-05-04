@@ -23,7 +23,7 @@ class Level extends Model
 
 
 
-
+   protected $primaryKey = 'level_id';
     public $fillable = [
         'level',
         'course_id',
@@ -36,7 +36,7 @@ class Level extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'level_id' => 'integer',
         'level' => 'string',
         'course_id' => 'integer',
         'level_description' => 'string'
