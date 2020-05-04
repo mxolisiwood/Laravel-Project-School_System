@@ -68,6 +68,7 @@ class ClassScheduling extends Model
     public static $rules = [
         'course_id' => 'required',
         'shift_id' => 'required',
+        'level_id' => 'required',
         'classroom_id' => 'required',
         'batch_id' => 'required',
         'day_id' => 'required',
