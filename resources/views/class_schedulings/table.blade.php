@@ -18,16 +18,16 @@
         <tbody>
         @foreach($classSchedulings as $classScheduling)
             <tr>
-                <td>{{ $classScheduling->course_name }}</td>
-            <td>{{ $classScheduling->level }}</td>
-            <td>{{ $classScheduling->shift }}</td>
-            <td>{{ $classScheduling->classroom_name }}</td>
-            <td>{{ $classScheduling->batche }}</td>
-            <td>{{ $classScheduling->day }}</td>
-            <td>{{ $classScheduling->time }}</td>
-            <td>{{ $classScheduling->teacher_name }}</td>
+                <td>{!! $classScheduling->course_name !!}</td>
+            <td>{!! $classScheduling->level !!}</td>
+            <td>{!! $classScheduling->shift !!}</td>
+            <td>{!! $classScheduling->classroom_name !!}</td>
+            <td>{!! $classScheduling->batch !!}</td>
+            <td>{!! $classScheduling->name !!}</td>
+            <td>{!! $classScheduling->time !!}</td>
+            <td>{!! $classScheduling->last_name !!}</td>
            
-            <td>{{ $classScheduling->status }}</td>
+            <td>{!! $classScheduling->status !!}</td>
                 <td>
                     {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
