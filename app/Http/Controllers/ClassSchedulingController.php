@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use DB;
 //Adding all our model classes here
 use App\models\Batche;
 use App\models\Classes;
@@ -51,7 +52,30 @@ class ClassSchedulingController extends AppBaseController
         
         $classSchedulings = $this->classSchedulingRepository->all();
 
-        return view('class_schedulings.index', compact('batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher', 'classroom'))
+        //DB relationships
+        $classScheduling = DB::table('class_schedulings')->select(
+                                                                  'courses.*',
+                                                                  'levels.*',
+                                                                  'days.*',
+                                                                  'batches.*',
+                                                                  'classes.*',
+                                                                  'shifts.*',
+                                                                  'times.*',
+                                                                  'teachers.*',
+                                                                  'classrooms.*'
+                                                                )
+                                                                ->join('courses','courses.course_id','=','class_schedulings.course_id')
+                                                                ->join('batches','batches.batch_id','=','class_schedulings.batch_id')
+                                                                ->join('classes','classes.class_id','=','class_schedulings.class_id')
+                                                                ->join('days','days.day_id','=','class_schedulings.day_id')
+                                                                ->join('levels','levels.level_id','=','class_schedulings.level_id')
+                                                                ->join('shifts','shifts.shift_id','=','class_schedules.shift_id')
+                                                                ->join('times','times.time_id','=','class_schedulings.time_id')
+                                                                ->join('teachers','teachers.teacher_id','=','class_schedulings.teacher_id')
+                                                                ->join('classroms','classrooms.classroom_id','=','class_schedulings.classroom_id')
+                                                                ->get();
+
+        return view('class_schedulings.index', compact('class_scheduling','batche', 'class', 'course', 'day', 'level', 'shift', 'time', 'teacher', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
     }
 
