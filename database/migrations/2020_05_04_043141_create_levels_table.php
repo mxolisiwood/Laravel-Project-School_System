@@ -13,11 +13,12 @@ class CreateLevelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('levels', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('level', function (Blueprint $table) {
+            $table->bigIncrements('level_id');
             $table->string('level');
             $table->integer('course_id')->unsigned();
             $table->longtext('level_description');
+            $table->softDeletes();
             $table->timestamps();
           //  $table->foreign('course_id')->references('level_id')->on('');
 
@@ -31,6 +32,6 @@ class CreateLevelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('levels');
+        Schema::dropIfExists('level');
     }
 }
