@@ -19,7 +19,8 @@ class LevelController extends AppBaseController
     {
         $this->levelRepository = $levelRepo;
     }
-
+  
+    protected $primaryKey = 'level_id';
     /**
      * Display a listing of the Level.
      *
