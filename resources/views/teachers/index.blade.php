@@ -4,7 +4,8 @@
     <section class="content-header">
         <h1 class="pull-left">Teachers</h1>
         <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus-circle" arial-hidden="true" data-toggle="modal" data-target="#teacher-add-modal">Add New</i></a>
+           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus-circle" arial-hidden="true" data-toggle="modal"
+            data-target="#teacher-add-modal">Add New Teacher</i></a>
         </h1>
     </section>
     <div class="content">
