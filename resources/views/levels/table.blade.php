@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>Level</th>
-        <th>Course Id</th>
+        <th>Course Name</th>
         <th>Level Description</th>
                 <th colspan="3">Action</th>
             </tr>
