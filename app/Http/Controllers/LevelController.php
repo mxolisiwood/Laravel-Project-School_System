@@ -9,6 +9,9 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use DB;
+
+use App\models\Course;
 
 class LevelController extends AppBaseController
 {
@@ -30,11 +33,25 @@ class LevelController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $levels = $this->levelRepository->all();
 
-        return view('levels.index')
+        $course = Course::all();
+
+        $levels = $this->levelRepository->all();
+        
+        $levels = DB::table('levels')->select('courses.*',
+                                               'level',
+                                               'level_description',
+                                               'level_id')
+        
+        ->join('courses','courses.course_id','=','levels.course_id')
+        ->get();
+        
+
+        return view('levels.index', compact('levels','course'))
             ->with('levels', $levels);
     }
+
+   
 
     /**
      * Show the form for creating a new Level.

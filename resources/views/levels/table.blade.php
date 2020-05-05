@@ -12,7 +12,7 @@
         @foreach($levels as $level)
             <tr>
                 <td>{{ $level->level }}</td>
-            <td>{{ $level->course_id }}</td>
+            <td>{{ $level->course_name }}</td>
             <td>{{ $level->level_description }}</td>
                 <td>
                     {!! Form::open(['route' => ['levels.destroy', $level->level_id], 'method' => 'delete']) !!}
