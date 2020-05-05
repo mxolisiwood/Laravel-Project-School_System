@@ -2,14 +2,14 @@
     <table class="table" id="classSchedulings-table">
         <thead>
             <tr>
-                <th>Course Id</th>
-        <th>Level Id</th>
-        <th>Shift Id</th>
-        <th>Classroom Id</th>
-        <th>Batch Id</th>
-        <th>Day Id</th>
-        <th>Time Id</th>
-        <th>Teacher Id</th>
+                <th>Course </th>
+        <th>Level </th>
+        <th>Shift </th>
+        <th>Classroom </th>
+        <th>Batch </th>
+        <th>Day </th>
+        <th>Time </th>
+        <th>Teacher </th>
         
         <th>Status</th>
                 <th colspan="3">Action</th>
@@ -27,7 +27,14 @@
             <td>{!! $classScheduling->time !!}</td>
             <td>{!! $classScheduling->last_name !!}</td>
            
-            <td>{!! $classScheduling->status !!}</td>
+            <td> 
+               @if($classScheduling->status == 1)
+                 <div style="color:green"> Active </div>
+                 @else 
+                  <div style="color:red"> Inactive </div>
+                 @endif 
+            
+            </td>
                 <td>
                     {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
