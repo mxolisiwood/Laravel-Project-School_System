@@ -14,14 +14,15 @@ class CreateClassAssigningsTable extends Migration
     public function up()
     {
         Schema::create('class_assignings', function (Blueprint $table) {
-            $table->bigIncrements('class_assignid');
+       
+            $table->bigIncrements('assign_id');
             $table->integer('course_id');
             $table->integer('level_id');
             $table->integer('shift_id');
             $table->integer('classroom_id');
             $table->integer('batch_id');
             $table->integer('time_id');
-            $table->integer('semester_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

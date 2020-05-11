@@ -187,12 +187,6 @@ placeholder="Enter Nationality">
 </div>
 
 
-    
-
-
-
-
-
 
 
 <!-- Date Registered Field -->

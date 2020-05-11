@@ -34,9 +34,5 @@
     <p>{{ $classAssigning->time_id }}</p>
 </div>
 
-<!-- Semester Id Field -->
-<div class="form-group">
-    {!! Form::label('semester_id', 'Semester Id:') !!}
-    <p>{{ $classAssigning->semester_id }}</p>
-</div>
+
 

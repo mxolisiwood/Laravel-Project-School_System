@@ -26,7 +26,7 @@ class ClassAssigning extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
+    protected $primaryKey = 'assign_id';
 
     public $fillable = [
         'course_id',
@@ -35,7 +35,7 @@ class ClassAssigning extends Model
         'classroom_id',
         'batch_id',
         'time_id',
-        'semester_id'
+        
     ];
 
     /**
@@ -51,7 +51,7 @@ class ClassAssigning extends Model
         'classroom_id' => 'integer',
         'batch_id' => 'integer',
         'time_id' => 'integer',
-        'semester_id' => 'integer'
+        
     ];
 
     /**
@@ -66,7 +66,7 @@ class ClassAssigning extends Model
         'classroom_id' => 'required',
         'batch_id' => 'required',
         'time_id' => 'required',
-        'semester_id' => 'required'
+        
     ];
 
     

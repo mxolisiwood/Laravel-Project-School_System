@@ -19,6 +19,7 @@ class ClassAssigningController extends AppBaseController
     {
         $this->classAssigningRepository = $classAssigningRepo;
     }
+    protected $primaryKey = 'assign_id';
 
     /**
      * Display a listing of the ClassAssigning.

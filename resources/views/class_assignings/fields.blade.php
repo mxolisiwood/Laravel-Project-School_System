@@ -34,11 +34,6 @@
     {!! Form::number('time_id', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Semester Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('semester_id', 'Semester Id:') !!}
-    {!! Form::number('semester_id', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

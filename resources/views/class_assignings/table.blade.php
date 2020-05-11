@@ -8,7 +8,7 @@
         <th>Classroom Id</th>
         <th>Batch Id</th>
         <th>Time Id</th>
-        <th>Semester Id</th>
+       
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -21,12 +21,12 @@
             <td>{{ $classAssigning->classroom_id }}</td>
             <td>{{ $classAssigning->batch_id }}</td>
             <td>{{ $classAssigning->time_id }}</td>
-            <td>{{ $classAssigning->semester_id }}</td>
+            
                 <td>
-                    {!! Form::open(['route' => ['classAssignings.destroy', $classAssigning->class_assignid], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['classAssignings.destroy', $classAssigning->assign_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('classAssignings.show', [$classAssigning->class_assignid]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a href="{{ route('classAssignings.edit', [$classAssigning->class_assignid]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="{{ route('classAssignings.show', [$classAssigning->assign_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a href="{{ route('classAssignings.edit', [$classAssigning->assign_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
                     {!! Form::close() !!}
