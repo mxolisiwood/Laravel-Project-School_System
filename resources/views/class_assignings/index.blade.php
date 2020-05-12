@@ -6,7 +6,7 @@
         <h1 class="pull-right">
         <a data-toggle="modal" data-target="#class_assigning-add-modal" 
         class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" 
-           >Add New class_assigning</a>
+           >Add New class Assigning</a>
         </h1>
     </section>
     <div class="content">
