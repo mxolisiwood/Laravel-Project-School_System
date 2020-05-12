@@ -23,7 +23,7 @@ class ClassAssigningRepository extends BaseRepository
         'classroom_id',
         'batch_id',
         'time_id',
-        'semester_id'
+        
     ];
 
     /**

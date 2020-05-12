@@ -9,6 +9,15 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use DB;
+//Adding All our model classes
+use App\models\Batche;
+use App\models\Classroom;
+use App\models\Course;
+use App\models\Level;
+use App\models\Shift;
+use App\models\Time;
+
 
 class ClassAssigningController extends AppBaseController
 {
@@ -30,9 +39,40 @@ class ClassAssigningController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $batche = Batche::all();
+        $course = Course::all();
+        $level = Level::all();
+        $shift = Shift::all();
+        $time = Time::all();
+        $classroom = Classroom::all();
+
         $classAssignings = $this->classAssigningRepository->all();
 
-        return view('class_assignings.index')
+         //DB relationships
+         $classSchedulings = DB::table('class_assignings')->select(
+            'courses.*',
+            'levels.*',
+           // 'days.*',
+            'batches.*',
+            //'classes.*',
+            'shifts.*',
+            'times.*',
+           // 'teachers.*',
+            'classrooms.*',
+            'assign_id'
+          )
+          ->join('courses','courses.course_id','=','class_assignings.course_id')
+          ->join('batches','batches.batch_id','=','class_assignings.batch_id')
+          //->join('classes','classes.class_id','=','class_schedulings.class_id')
+         // ->join('days','days.day_id','=','class_schedulings.day_id')
+          ->join('levels','levels.level_id','=','class_assignings.level_id')
+          ->join('shifts','shifts.shift_id','=','class_assignings.shift_id')
+          ->join('times','times.time_id','=','class_assignings.time_id')
+         // ->join('teachers','teachers.teacher_id','=','class_schedulings.teacher_id')
+          ->join('classrooms','classrooms.classroom_id','=','class_assignings.classroom_id')
+          ->get();
+
+        return view('class_assignings.index', compact('classAssignings','batche', 'course', 'level', 'shift', 'time', 'classroom'))
             ->with('classAssignings', $classAssignings);
     }
 

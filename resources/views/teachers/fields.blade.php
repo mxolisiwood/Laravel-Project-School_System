@@ -190,10 +190,20 @@ placeholder="Enter Nationality">
 
 
 <!-- Date Registered Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('date_registered', 'Date Registered:') !!}
-    {!! Form::date('date_registered', null, ['class' => 'form-control','id'=>'date_registered']) !!}
+<div class="col-md-6">
+<div class="form-group">
+<div class="input-group">
+<div class="inout-group-addon">
+<i class="fa fa-calender teacherdob"></i>
 </div>
+<input type="text" name="date_registered" id="date_registered" class="form-control text-capitalize" placeholder="YYYY-MM-DD">
+</div>
+</div>
+</div>
+
+
+
+
 
 
 <!-- User Id Field -->

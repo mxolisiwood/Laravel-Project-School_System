@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model as Model;
  * @property integer classroom_id
  * @property integer batch_id
  * @property integer time_id
- * @property integer semester_id
+ 
  */
 class ClassAssigning extends Model
 {
